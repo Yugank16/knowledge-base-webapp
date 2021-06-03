@@ -13,6 +13,8 @@ import 'react-confirm-alert/src/react-confirm-alert.css';
 import 'Pages/Signup/index.css';
 import PageLoader from 'Components/PageLoader';
 
+const API_BASE_URL = "https://knowledge-base-appl.herokuapp.com";
+
 const SignUp = () => {
   const history = useHistory();
   const [loading, setLoading] = useState(false);
@@ -34,7 +36,7 @@ const SignUp = () => {
       validationSchema={signupSchema}
       onSubmit={(values) => {
         setLoading(true);
-        axios.post(API_ROUTES.signup, values).then(() => {
+        axios.post(`${API_BASE_URL}${API_ROUTES.signup}`, values).then(() => {
           setLoading(false);
           confirmAlert({
             title,

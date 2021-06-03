@@ -13,7 +13,6 @@ import Profile from 'Pages/Profile';
 import NotFound from 'Pages/NotFound';
 import Startup from 'Startup';
 import store from 'reducers/configStore';
-import 'axios/interceptor';
 import 'constants/color.css';
 
 const App = () => (

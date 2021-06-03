@@ -10,6 +10,9 @@ import { useDispatch } from 'react-redux';
 import { loginSchema } from 'validations/formValidations';
 import { setItem } from 'services/browserStorage';
 import 'Pages/Login/index.css';
+import { post } from 'services/api';
+
+const API_BASE_URL = "https://knowledge-base-appl.herokuapp.com";
 
 const Login = () => {
   const [loading, setLoading] = useState(false);
@@ -27,7 +30,7 @@ const Login = () => {
       validationSchema={loginSchema}
       onSubmit={(values) => {
         setLoading(true);
-        axios.post(API_ROUTES.login, values).then((res) => {
+        post(`${API_BASE_URL}${API_ROUTES.login}`, values).then((res) => {
           setItem('token', res.data.token);
           setLoading(false);
           dispatch(logIn(res.data.user));

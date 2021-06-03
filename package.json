@@ -1,5 +1,5 @@
 {
-  "name": "knowledge-base-frontend",
+  "name": "knowledge-base-webapp",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -53,7 +53,6 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://localhost:3000",
   "devDependencies": {
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
