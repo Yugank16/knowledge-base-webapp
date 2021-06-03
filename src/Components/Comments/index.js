@@ -44,7 +44,7 @@ const Comments = ({ userLoggedIn }) => {
   );
 };
 
-Comments.proptypes = {
+Comments.propTypes = {
   userLoggedIn: PropTypes.bool.isRequired,
 };
 

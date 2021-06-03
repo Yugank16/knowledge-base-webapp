@@ -74,7 +74,7 @@ const Answer = ({ userLoggedIn }) => {
   );
 };
 
-Answer.proptypes = {
+Answer.propTypes = {
   userLoggedIn: PropTypes.bool.isRequired,
 };
 
