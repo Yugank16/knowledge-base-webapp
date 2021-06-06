@@ -4,7 +4,7 @@ import { getItem } from 'services/browserStorage';
 const API_BASE_URL = "https://knowledge-base-appl.herokuapp.com";
 
 const Api = axios.create({
-  baseUrl: API_BASE_URL,
+  baseURL: API_BASE_URL,
 });
 
 Api.interceptors.request.use(
